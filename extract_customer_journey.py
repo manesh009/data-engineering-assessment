@@ -61,15 +61,3 @@ def get_customer_journeys():
     conn.close()  # Close the SQLite connection
     print('Data extracted from tables conversion and session_sources')
     return customer_journeys
-
-
-# print the customer journeys for further analysis
-"""
-customer_journeys = get_customer_journeys()
-
-for conv_id, journey in customer_journeys.items():
-    print(f"Conversion ID: {conv_id}")
-    for session in journey:
-        print(
-            f"Session ID: {session['session_id']}, Event Timestamp: {session['timestamp']}, Channel: {session['channel_label']}")
-"""
